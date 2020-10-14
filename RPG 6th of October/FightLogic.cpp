@@ -33,5 +33,5 @@ void removePlayerDamage(Player& player, Enemy& enemy)
 	int enemyDmg = enemyDamage(enemy);
 	int damageMultiplier = (enemy.getEnemyAttack() + 25) / 50;
 	int realFinal = enemyDmg * ((enemy.getEnemyAttack() + 25) / 5));
-	player.setPlayerHealth(realFinal);
+	player.setPlayerHealth(player.getPlayerHealth() - realFinal);
 }
