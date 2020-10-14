@@ -9,4 +9,6 @@
 // player.attack *4 - enemy.def*2
 
 int playerDamage(Player& player);
+int enemyDamage(Enemy& enemy);
 void removeEnemyDamage(Player& player, Enemy& enemy);
+void removePlayerDamage(Player& player, Enemy& enemy);
