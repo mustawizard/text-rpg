@@ -33,9 +33,11 @@ void welcomeToForest(Player& player)
 		std::this_thread::sleep_for(std::chrono::milliseconds(1500));
 		system("cls");
 		player.setForestDistanceTravelled(playerDist);
+		// fight logic
 		if (player.getForestDistanceTravelled() >= forest.getForestMaxDistance())
 		{
-
+			std::cout << "End" << std::endl;
+			std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 		}
 		else
 		{
