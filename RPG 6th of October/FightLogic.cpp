@@ -16,6 +16,6 @@ void removeEnemyDamage(Player& player, Enemy& enemy)
 {
 	int playerDmg = playerDamage(player);
 	int damageMultiplier = (player.getPlayerAttack() + 25) / 50;
-	int realFinal = playerDmg * ((player.getPlayerAttack() + 25) / 55);
+	int realFinal = playerDmg * ((player.getPlayerAttack() + 25) / 5);
 	//// DAMAGEAVG * ((PLAYER ATT + 25) / 5)
 }
