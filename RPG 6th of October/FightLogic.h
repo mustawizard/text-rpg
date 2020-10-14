@@ -6,6 +6,7 @@
 
 // DAMAGE FORMULA 
 // DAMAGEAVG * ((PLAYER ATT + 25) / 5)
+// player.attack *4 - enemy.def*2
 
 int playerDamage(Player& player);
 void removeEnemyDamage(Player& player, Enemy& enemy);
