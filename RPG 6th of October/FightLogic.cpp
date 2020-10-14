@@ -11,6 +11,14 @@ int playerDamage(Player& player)
 	return random;
 
 }
+int enemyDamage(Enemy& enemy)
+{
+	int min = enemy.getMinDamage();
+	int max = enemy.getMaxDamage();
+	int random = rand() % min + max;
+	return random;
+}
+
 
 void removeEnemyDamage(Player& player, Enemy& enemy)
 {
@@ -19,4 +27,11 @@ void removeEnemyDamage(Player& player, Enemy& enemy)
 	int realFinal = playerDmg * ((player.getPlayerAttack() + 25) / 5);
 	enemy.setEnemyHealth(realFinal);
 	// DAMAGEAVG * ((PLAYER ATT + 25) / 5)
+}
+void removePlayerDamage(Player& player, Enemy& enemy)
+{
+	int enemyDmg = enemyDamage(enemy);
+	int damageMultiplier = (enemy.getEnemyAttack() + 25) / 50;
+	int realFinal = enemyDmg * ((enemy.getEnemyAttack() + 25) / 5));
+	player.setPlayerHealth(realFinal);
 }
