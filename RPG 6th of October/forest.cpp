@@ -13,27 +13,14 @@ void welcomeToForest(Player& player)
 		unsigned short int playerDist = 0;
 		system("cls");
 		playerDist = forestDistanceRand();
-		for (int i = 0; i < 3; i++)
-		{
-			std::cout << "Travelling through forest... ";
-			std::cout << "/";
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));
-			system("cls");
-			std::cout << "Travelling through forest... ";
-			std::cout << "-";
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));
-			system("cls");
-			std::cout << "Travelling through forest... ";
-			std::cout << "\\";
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));
-			system("cls");
-		}
+		
 		system("cls");
 		std::cout << "You travelled " << playerDist << "km " << std::endl;
 		std::this_thread::sleep_for(std::chrono::milliseconds(1500));
 		system("cls");
 		player.setForestDistanceTravelled(playerDist);
 		// fight logic
+		player.setForestDistanceTravelled(10);
 		if (player.getForestDistanceTravelled() >= forest.getForestMaxDistance())
 		{
 			std::cout << "End" << std::endl;
